@@ -1,7 +1,5 @@
 package com.dev2019155.tictactoe
 
-import androidx.annotation.VisibleForTesting
-
 class Game(
         internal val board: Array<Array<Player?>> = Array(3) { arrayOfNulls<Player?>(3) }
 ) {
