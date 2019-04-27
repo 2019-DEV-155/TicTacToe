@@ -7,4 +7,6 @@ dependencies {
     testImplementation "com.winterbe:expekt:$testing.expekt"
     androidTestImplementation "androidx.test.ext:junit:$testing.android.junit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$testing.android.espresso"
+    androidTestImplementation "androidx.test:runner:$testing.android.runner"
+    androidTestImplementation "androidx.test:rules:$testing.android.runner"
 }

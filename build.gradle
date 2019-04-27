@@ -13,7 +13,8 @@ buildscript {
     ext.testing = [
             android: [
                     espresso: '3.1.1',
-                    junit   : '1.1.0'
+                    junit   : '1.1.0',
+                    runner   : '1.1.1',
             ],
             expekt : '0.5.0',
             junit5 : '5.3.2',
