@@ -1,0 +1,10 @@
+apply plugin: 'de.mannodermaus.android-junit5'
+
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$testing.junit5"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$testing.junit5"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:$testing.junit5"
+    testImplementation "com.winterbe:expekt:$testing.expekt"
+    androidTestImplementation "androidx.test.ext:junit:$testing.android.junit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$testing.android.espresso"
+}
