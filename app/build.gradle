@@ -29,6 +29,7 @@ android {
 dependencies {
     implementation project(':tictactoe')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$libs.kotlin"
+    implementation "androidx.appcompat:appcompat:$libs.android.appcompat"
 }
 
 apply from: '../test_dependencies.gradle'

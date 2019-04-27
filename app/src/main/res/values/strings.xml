@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TicTacToe</string>
+    <string name="status_current_player_format">Current player: %s</string>
+    <string name="status_game_over_winner">Game over, the winner is: %s</string>
+    <string name="status_game_over_draw">Game over, it\'s a draw!</string>
+    <string name="restart">Restart</string>
 </resources>

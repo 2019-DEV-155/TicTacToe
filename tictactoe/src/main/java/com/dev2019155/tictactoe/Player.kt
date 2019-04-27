@@ -1,10 +1,14 @@
 package com.dev2019155.tictactoe
 
-enum class Player {
-    X, O;
+import androidx.annotation.DrawableRes
 
-    val nextPlayer: Player get() = when(this) {
-        X -> O
-        O -> X
-    }
+enum class Player(@DrawableRes val drawable: Int) {
+    X(R.drawable.ic_x),
+    O(R.drawable.ic_o);
+
+    val nextPlayer: Player
+        get() = when (this) {
+            X -> O
+            O -> X
+        }
 }

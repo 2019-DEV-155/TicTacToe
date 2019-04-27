@@ -2,13 +2,12 @@ package com.dev2019155.tictactoe
 
 import androidx.annotation.VisibleForTesting
 
-class Game {
-
-    @VisibleForTesting
-    internal val board = Array(3) { arrayOfNulls<Player?>(3) }
+class Game(
+        internal val board: Array<Array<Player?>> = Array(3) { arrayOfNulls<Player?>(3) }
+) {
 
     var currentPlayer: Player = Player.X
-        @VisibleForTesting internal set
+        internal set
 
     val isOver: Boolean
         get() = winner != null || board.all { it.all { tile -> tile != null } }
@@ -23,6 +22,8 @@ class Game {
         } else throw IllegalArgumentException("Player $player cannot play for $currentPlayer")
         currentPlayer = player.nextPlayer
     } else throw IllegalArgumentException("Position $column, $row is not EMPTY")
+
+    operator fun get(column: Int, row: Int) = board[column][row]
 
     private fun getWinnerHorizontally(): Player? = (0..2).asSequence().mapNotNull { column ->
         getPlayerIfIdenticalOn(column, 0, column, 1, column, 2)
